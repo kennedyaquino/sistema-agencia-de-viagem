@@ -41,11 +41,12 @@ public class DepoimentoService implements IDepoimentoService {
     }
 
     @Override
-    public void deletar(String id) {
+    public boolean deletar(String id) {
         if(repository.existsById(id)) {
             repository.deleteById(id);
+            return true;
         } else {
-            throw new RuntimeException("Não existe id: " + id);
+            return false;
         }
     }
 

@@ -41,9 +41,12 @@ public class DepoimentoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deletar(String id) {
-        service.deletar(id);
-        return ResponseEntity.ok().build();
+    public ResponseEntity<Void> deletar(@PathVariable String id) {
+        if(service.deletar(id)) {
+            return ResponseEntity.ok().build();
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 
 }

@@ -11,7 +11,7 @@ public interface IDepoimentoService {
     DepoimentoDto criarDepoimento(DepoimentoForm form);
     List<DepoimentoDto> listar();
     DepoimentoDto atualizarDepoimento(String id, DepoimentoDto depoimentoAtualizado);
-    void deletar(String id);
+    boolean deletar(String id);
 
     List<DepoimentoDto> listarDepoimentosLimitadosEAleatorios();
 
