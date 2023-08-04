@@ -1,5 +1,6 @@
 package com.br.jornada.milhas.services.impl;
 
+import com.br.jornada.milhas.exceptions.NotFoundException;
 import com.br.jornada.milhas.models.Depoimento;
 import com.br.jornada.milhas.models.dto.DepoimentoDto;
 import com.br.jornada.milhas.models.form.DepoimentoForm;
@@ -31,7 +32,7 @@ public class DepoimentoService implements IDepoimentoService {
 
     @Override
     public DepoimentoDto atualizarDepoimento(String id, DepoimentoDto depoimentoAtualizado) {
-        Depoimento depoimento = repository.findById(id).orElseThrow(() -> new RuntimeException("Não existe id: " + id));
+        Depoimento depoimento = repository.findById(id).orElseThrow(() -> new NotFoundException("Não existe id: " + id));
 
         depoimento.setDepoimento(depoimentoAtualizado.getDepoimento());
         depoimento.setFoto(depoimentoAtualizado.getFoto());
