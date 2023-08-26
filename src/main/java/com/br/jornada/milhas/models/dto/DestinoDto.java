@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -15,7 +17,7 @@ public class DestinoDto {
     private String id;
     private String foto;
     private String nome;
-    private String preco;
+    private BigDecimal preco;
 
     public DestinoDto(Destino destino) {
         this.id = destino.getId();
