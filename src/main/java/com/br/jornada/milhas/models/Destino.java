@@ -23,13 +23,19 @@ public class Destino {
     @Id
     private String id;
     private String foto;
+    private String foto2;
+    private String meta;
     private String nome;
     private BigDecimal preco;
+    private String textoDescritivo;
+
 
     public Destino(DestinoForm form) {
         this.id = UUID.randomUUID().toString();
         this.foto = form.getFoto();
         this.nome = form.getNome();
         this.preco = new BigDecimal(form.getPreco());
+        this.meta = form.getMeta();
+        this.textoDescritivo = form.getTextoDescritivo();
     }
 }

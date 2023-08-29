@@ -100,6 +100,7 @@ public class DepoimentoControllerTest {
         this.mockMvc.perform(put("/depoimentos/{id}", depoimento.getId())
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(mapper.writeValueAsString(depoimento))
+                        .accept(MediaType.APPLICATION_JSON)
                 )
                 .andDo(print())
                 .andExpect(status().isOk());

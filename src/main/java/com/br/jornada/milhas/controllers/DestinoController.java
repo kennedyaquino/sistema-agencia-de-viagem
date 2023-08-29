@@ -48,4 +48,9 @@ public class DestinoController {
         }
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<DestinoDto> buscarPorId(@PathVariable String id) {
+        return ResponseEntity.ok(service.buscarDestinoPorId(id));
+    }
+
 }

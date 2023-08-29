@@ -59,4 +59,9 @@ public class DestinoService implements IDestinoService {
 
         return new DestinoDto(repository.save(destino));
     }
+
+    @Override
+    public DestinoDto buscarDestinoPorId(String id) {
+        return new DestinoDto(repository.findById(id).orElseThrow(() -> new NotFoundException("Nenhum destino foi encontrado")));
+    }
 }

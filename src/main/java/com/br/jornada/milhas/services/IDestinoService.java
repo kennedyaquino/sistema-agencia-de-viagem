@@ -11,4 +11,6 @@ public interface IDestinoService {
     DestinoDto criarDestino(DestinoForm form);
     boolean deletarDestino(String id);
     DestinoDto atualizarDestino(String id, DestinoDto destino);
+
+    DestinoDto buscarDestinoPorId(String id);
 }
