@@ -1,14 +1,15 @@
 package com.br.jornada.milhas.models;
 
 import com.br.jornada.milhas.models.form.DestinoForm;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -27,6 +28,7 @@ public class Destino {
     private String meta;
     private String nome;
     private BigDecimal preco;
+    @Column(name = "texto_descritivo")
     private String textoDescritivo;
 
 

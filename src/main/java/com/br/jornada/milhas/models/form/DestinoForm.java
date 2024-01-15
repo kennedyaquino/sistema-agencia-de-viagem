@@ -1,9 +1,10 @@
 package com.br.jornada.milhas.models.form;
 
-import jakarta.validation.constraints.Max;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import javax.validation.constraints.Max;
 
 @NoArgsConstructor
 @Getter

@@ -18,7 +18,7 @@ public class InteligenciaArtificialService implements IArtificialIteligenteServi
         OpenAiService service = new OpenAiService(token);
 
         CompletionRequest completionRequest = CompletionRequest.builder()
-                .model("text-davinci-003")
+                .model("gpt-3.5-turbo-instruct")
                 .prompt(texto)
                 .maxTokens(500)
                 .temperature(0.7)
